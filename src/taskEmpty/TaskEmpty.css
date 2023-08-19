@@ -1,0 +1,45 @@
+
+.empty {
+  box-sizing: border-box;
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 62px 24px;
+  gap: 16px;
+
+  width: 736px;
+  height: 244px;
+
+  /* Grey 400 */
+  border-top: 1px solid #333333;
+  border-radius: 8px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+
+.textEmpty {
+  /*  you stil don't have tasks . Create your tasks and  organize your items to do */
+  width: 688px;
+  height: 44px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+  text-align: center;
+  /* Gray 300 */
+  color: #808080;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}

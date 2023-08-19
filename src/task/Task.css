@@ -1,0 +1,139 @@
+
+
+.container-task-empty-todo {
+/* Tasks */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+position: absolute;
+width: 736px;
+height: 451px;
+left: calc(50% - 736px/2);
+top: 291px;
+
+
+}
+.taskOfList {
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+padding: 16px;
+gap: 12px;
+
+width: 736px;
+height: 72px;
+
+/* Gray 500 */
+background: #262626;
+/* Gray 400 */
+border: 1px solid #333333;
+box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+align-self: stretch;
+flex-grow: 0;
+}
+
+.check {
+  width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.checkBtn {
+width: 24px;
+height: 24px;
+background: transparent;
+border-radius: 50%;
+border: 2px solid blue;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.btn {
+  background: transparent;
+  border: none;
+}
+.intergerTask {
+/* Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer. */
+
+width : 632px;
+height: 40px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+
+
+/* or 20px */
+
+/* Gray 100 */
+color: #F2F2F2;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+}
+
+.textCompleted {
+  text-decoration:line-through;
+}
+
+.btnCheck  {
+  width: 24px;
+ height: 24px;
+ background: transparente;
+ border-radius: 50%;
+ border: 2px solid blue;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.trashTask {
+background: transparent;
+border: none;
+border-radius: 4px;
+width: 34px;
+height: 34px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+}
+
+.remove {
+
+width: 24px;
+height: 24px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+}
