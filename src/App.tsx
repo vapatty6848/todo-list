@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import Header from "./Header/Header"
 import TaskEmpty from "./taskEmpty/TaskEmpty";
 
 import Info from "./info/Info";
 import Task from "./task/Task";
+
+const LOCAL_STORAGE_KEY = "todo:savedTasks";
 
 export interface ITask {
   id: string;
@@ -14,10 +17,26 @@ export interface ITask {
 }
 
 function App() {
-
   const [tasks, setTasks] = useState<ITask[]>([]);
+
+  function setTaskItems(newTasks: ITask[]) {
+    setTasks(newTasks);
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newTasks));
+   }
+
+  function loadTaskItems() {
+    const savedItemsStorage = localStorage.getItem(LOCAL_STORAGE_KEY);
+    if (savedItemsStorage) {
+      setTasks(JSON.parse(savedItemsStorage))
+    }
+  }
+
+  useEffect(() => {
+    loadTaskItems()
+  }, []);
+  console.log(loadTaskItems)
   function addTask(taskTodo: string) {
-    setTasks([
+    setTaskItems([
       ...tasks,
       {
         id: crypto.randomUUID(),
@@ -31,7 +50,7 @@ function App() {
 
   function onDeleted(taskId:string) {
     const newTask = tasks.filter((task) => task.id !== taskId);
-    setTasks([...newTask])
+    setTaskItems([...newTask])
   }
 
   function isCompleted(taskId: string) {
@@ -44,7 +63,7 @@ function App() {
       }
       return task;
     });
-    setTasks(newTask)
+    setTaskItems(newTask)
   }
 
 

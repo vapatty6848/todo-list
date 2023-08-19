@@ -28,7 +28,8 @@ export function Header({ onAddTask }: Props) {
       <div className="newTask">
         <input className="inputNewTask"
           placeholder='Add a new task'
-          type="text"
+          id='inputTodo'
+          type='text'
           value={addTodo}
           onChange={onChangeAddTodo}
         />
